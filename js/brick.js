@@ -9,6 +9,8 @@ export default class Brick
 		this.width = 80;
 		this.height = 24;
 		this.markedForDeletion = false;
+		this.score = 0;
+		
 		
 		this.position = position;
 		this.color = color;
@@ -16,7 +18,7 @@ export default class Brick
 		this.color3 = color3; */
 		
 	
-		console.log(this.color);
+		
 	}	
 		draw(ctx)
 		{
@@ -28,12 +30,14 @@ export default class Brick
 			ctx.fillRect(this.position.x,this.position.y, this.width, this.height);	
 		}
 		update(dt)
+		
 		{
 			if(detectCollision(this.game.ball, this))
 			{
 				this.game.ball.speed.y = -this.game.ball.speed.y;
 				this.markedForDeletion = true;
 			}
+			
 		}
 		
 	

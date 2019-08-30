@@ -18,17 +18,7 @@ export default class InputHandler
 				case 37:
 				paddle.moveLeft();
 				break;
-				
-				//case 38:
-				//paddle.moveUp();
-				//break;
-				
-				//case 40:
-				//paddle.moveDown();
-				//break;
-				
-				
-				
+			
 				case 39:
 				paddle.moveRight();
 				break ;
@@ -46,20 +36,11 @@ export default class InputHandler
 				paddle.stop();
 				break;
 				
-				//case 38:
-				//if(paddle.speed < 0)
-				//paddle.stop();
-				//break;
-				
 				case 39:
 				if(paddle.speed > 0)
 				paddle.stop();
 				break ;
 				
-				//case 40:
-				//if(paddle.speed < 0)
-				//paddle.stop();
-				//break;
 			}
 		});
 	}
